@@ -19,10 +19,11 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		webcactipluginroot /usr/share/cacti/plugins/%{namesrc}
 
 %description
-Plugin for Cacti - poller performance plugin 
+Plugin for Cacti - poller performance plugin.
 
 %description -l pl
-Wtyczka do Cacti - 
+Wtyczka do Cacti - wtyczka sprawdzaj±ca wydajno¶æ pobierania
+informacji.
 
 %prep
 %setup -q -n %{namesrc}
