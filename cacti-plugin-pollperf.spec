@@ -1,7 +1,7 @@
 %define		namesrc	pollperf
 %include	/usr/lib/rpm/macros.perl
 Summary:	Plugin for Cacti - pollperf
-Summary(pl):	Wtyczka do Cacti - pollperf
+Summary(pl.UTF-8):   Wtyczka do Cacti - pollperf
 Name:		cacti-plugin-pollperf
 Version:	0.1
 Release:	0.1
@@ -21,8 +21,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Plugin for Cacti - poller performance plugin.
 
-%description -l pl
-Wtyczka do Cacti - wtyczka sprawdzaj±ca wydajno¶æ pobierania
+%description -l pl.UTF-8
+Wtyczka do Cacti - wtyczka sprawdzajÄ…ca wydajnoÅ›Ä‡ pobierania
 informacji.
 
 %prep
