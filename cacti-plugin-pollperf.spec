@@ -1,4 +1,4 @@
-%define		namesrc	pollperf
+%define		plugin	pollperf
 %include	/usr/lib/rpm/macros.perl
 Summary:	Plugin for Cacti - pollperf
 Summary(pl.UTF-8):	Wtyczka do Cacti - pollperf
@@ -8,7 +8,7 @@ Release:	0.1
 License:	GPL v2
 Group:		Applications/WWW
 Source0:	http://cactiusers.org/forums/download.php?id=54
-#Source0:	http://download.cactiusers.org/downloads/%{namesrc}.tar.gz
+#Source0:	http://download.cactiusers.org/downloads/%{plugin}.tar.gz
 # Source0-md5:
 URL:		http://www.cactiusers.org/
 BuildRequires:	rpm-perlprov
@@ -16,7 +16,8 @@ Requires:	cacti
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
-%define		webcactipluginroot /usr/share/cacti/plugins/%{namesrc}
+%define		cactidir		/usr/share/cacti
+%define		plugindir		%{cactidir}/plugins/%{plugin}
 
 %description
 Plugin for Cacti - poller performance plugin.
@@ -26,12 +27,12 @@ Wtyczka do Cacti - wtyczka sprawdzająca wydajność pobierania
 informacji.
 
 %prep
-%setup -q -n %{namesrc}
+%setup -q -n %{plugin}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{webcactipluginroot}
-cp -a * $RPM_BUILD_ROOT%{webcactipluginroot}
+install -d $RPM_BUILD_ROOT%{plugindir}
+cp -a . $RPM_BUILD_ROOT%{plugindir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -39,4 +40,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc LICENSE README
-%{webcactipluginroot}
+%{plugindir}
