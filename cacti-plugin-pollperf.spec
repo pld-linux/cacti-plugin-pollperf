@@ -5,7 +5,7 @@ Summary:	Plugin for Cacti - pollperf
 Summary(pl.UTF-8):	Wtyczka do Cacti - pollperf
 Name:		cacti-plugin-%{plugin}
 Version:	0.1
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/WWW
 Source0:	http://forums.cacti.net/download/file.php?id=4956#/%{plugin}.zip
@@ -13,9 +13,9 @@ Source0:	http://forums.cacti.net/download/file.php?id=4956#/%{plugin}.zip
 URL:		http://forums.cacti.net/viewtopic.php?t=12369
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	cacti
-Requires:	php-common >= 4:%{php_min_version}
-Requires:	php-date
-Requires:	php-pcre
+Requires:	php(core) >= %{php_min_version}
+Requires:	php(date)
+Requires:	php(pcre)
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
