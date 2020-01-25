@@ -1,6 +1,5 @@
 %define		plugin	pollperf
 %define		php_min_version 5.0.0
-%include	/usr/lib/rpm/macros.php
 Summary:	Plugin for Cacti - pollperf
 Summary(pl.UTF-8):	Wtyczka do Cacti - pollperf
 Name:		cacti-plugin-%{plugin}
